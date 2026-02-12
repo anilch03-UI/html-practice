@@ -1,0 +1,41 @@
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #e4ebf5;
+}
+
+
+h2{
+    text-align: center; 
+}
+button {
+    text-align: center;
+     background: #ff9500;
+     color: white;
+     padding: 8px; border:
+     none; border-radius: 5px;
+     width: 90%; cursor: pointer;
+     font-size: 16px; 
+}
+.login-box{
+    text-align: center;
+    background-color: rgb(245, 247, 248);
+    padding-top:10px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1); 
+    width: 80%; 
+    max-width: 300px;
+    margin: 50px auto;
+    margin-bottom: 30px;}
+input,select {
+     width: 90%;
+     padding: 8px;
+     margin: 1% 0;
+     border: 1px solid #ddd;
+     border-radius: 5px;
+     box-sizing: border-box;
+}
+
+a {
+    color: #ff9500;
+    text-decoration: none;  
+}
