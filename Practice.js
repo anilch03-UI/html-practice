@@ -163,9 +163,8 @@ for(let i = 0; i < classStudents.length; i++){
 let letters = ["a", "b", "c", "d", "e","a"]
 console.log(letters.length);
 
-let class1Students = ["mahesh", "suresh", "ramesh", "suresh", "Prasad", "suresh", "suresh", "mahesh"];
+let class1Students = ["mahesh", "suresh", "ramesh", "suresh", "Prasad", "suresh", "suresh", "mahesh"]; 
 let Count = 0;
- 
 console.log(class1Students.length);// array declaration
  
 for(let i = 0; i < class1Students.length; i++)
@@ -173,3 +172,86 @@ for(let i = 0; i < class1Students.length; i++)
    Count++;
   }
   console.log(Count);
+
+  let fruits = ["apple", "banana", "orange", "grape", "mango"];
+  console.log(fruits.length);
+  console.log(fruits[0]);
+  fruits.push("kiwi");
+  console.log(fruits);
+  fruits.pop();
+  console.log(fruits);
+  console.log(fruits.includes("apple"));
+  fruits.shift();
+ console.log(fruits);
+ fruits.unshift("strawberry");
+ console.log(fruits);
+ fruits.indexOf("banana");
+ console.log(fruits.indexOf("banana"));
+ console.log(fruits.join(", "));
+
+let name = 'sireesha';
+console.log(name.toUpperCase());
+console.log(name.length);
+console.log(name.includes("java"));
+console.log(name.split("e"));
+console.log(name.toLowerCase());
+console.log(name.slice(0, 4));
+console.log(name.replace('esha','Anil'));
+let name1 = 'Anil Kumar';
+console.log(name1.trim());
+
+let car = { brand: 'Ertiga', model: 2025, price: 1000000 };
+console.log(car);
+console.log(car.brand);
+console.log(car.model); 
+car.colour = 'white';
+console.log(car);
+car.price = 1200000;
+console.log(car);
+
+let vegetables = ["potato", "tomato", "onion", "carrot", "cabbage"];
+console.log(vegetables);
+console.log(vegetables[0]);
+vegetables.push('brinjal');
+console.log(vegetables);
+vegetables.pop();
+console.log(vegetables);
+console.log(vegetables.includes("tomato"));
+vegetables.shift();
+console.log(vegetables);
+console.log(vegetables.indexOf("carrot"));
+console.log(vegetables.join(", "));
+console.log(vegetables.length);
+
+let name2 = 'harisha';
+console.log(name2.toUpperCase());
+console.log(name2.length);
+console.log(name2.includes("java"));
+console.log(name2.split('a'));
+console.log(name2.toLowerCase());
+console.log(name2.slice(0,3));
+console.log(name2.replace('har','Anil'));
+let name3 = 'Anil Kumar';
+console.log(name3.trim());
+
+let scooty ={ brand: 'Activa', model: 2025, price: 85000 };
+console.log(scooty);
+console.log(scooty.brand);
+console.log(scooty.model);
+scooty.colour = 'black';
+console.log(scooty);
+scooty.price = 90000;
+console.log(scooty);
+
+let students1 = ["mahesh", "suresh", "ramesh", "Prasad"];
+console.log(students1);
+console.log(students1[0]);
+console.log(students1[1]);
+console.log(students1[2]);
+console.log(students1[3]);
+console.log(students1.length);
+
+let vowels = 'aeiou';
+console.log(vowels.length);
+console.log(vowels.toUpperCase());
+console.log(vowels.includes("java")); 
