@@ -31,6 +31,13 @@ console.log("Division of two numbers", f);
 const btn = document.getElementById("submitBtn");
 const inp = document.getElementById("nameInput");
 
+btn.addEventListener("click", () => {
+  console.log("clicked");
+});
+inp.addEventListener("input", (event) => {
+    console.log("User is typing:", inp.value);
+});
+
 //Addition function
 function addNumbers(number1, number2)
  {
@@ -90,12 +97,6 @@ console.log(c1marks[2]);
 console.log(c1marks[3]);
 console.log(c1marks[4]);
 
-btn.addEventListener("click", () => {
-  console.log("clicked");
-});
-inp.addEventListener("input", (event) => {
-    console.log("User is typing:", inp.value);
-});
 
 let classStudents = ["mahesh", "suresh", "ramesh", "suresh", "Prasad", "suresh"];
  
@@ -312,6 +313,100 @@ for (let i = 1; i < arr1.length; i++) {
 }
 console.log("Largest number:", largest);
 
+// Function 
+// function to check if a number is prime
+function isPrime(num) {
+    if (num <= 1) return false;
 
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            return false;
+        }
+        return true;
+    }
+    }
+    console.log(isPrime(7));
 
+// function to calculate the factorial of a number
+function factorial(n) {
+    if (n === 0 || n === 1) return 1;
+
+    return n * factorial(n - 1);        
+}
+console.log(factorial(5));
+
+                                    // to check if a string is a palindrome
+// using a while loop
+function isPalindrome(value) {
+  let str = value.toString();
+  let left = 0;
+  let right = str.length - 1;
+
+  while (left < right) {
+    if (str[left] !== str[right]) {
+      return false;
+    }
+    left++;
+    right--;
+  }
+  return true;
+}
+console.log(isPalindrome("1234321"));
+
+// using a for loop
+function isPalindrome(value) {
+  let str = value.toString();
+  let reversed = "";
+
+  for (let i = str.length - 1; i >= 0; i--) {
+    reversed += str[i];
+  }
+
+  return str === reversed;
+}
+
+console.log(isPalindrome(121));
+
+// using split(), reverse(), and join()
+
+function isPalindrome(value) {
+  const str = value.toString();
+  const reversed = str.split('').reverse().join('');
+  
+  return str === reversed;
+}
+console.log(isPalindrome("madam"));
+
+// to implement a simple calculator function
+
+function calculator(a, b, operator) {
+
+  if (operator === "+") {
+    return a + b;
+  }
+
+  if (operator === "-") {
+    return a - b;
+  }
+
+  if (operator === "*") {
+    return a * b;
+  }
+
+  if (operator === "/") {
+    if (b === 0) {
+      return "Cannot divide by zero";
+    }
+    return a / b;
+  }
+
+  return "Invalid operator";
+}
+
+// Example
+console.log(calculator(20, 10, "+")); 
+console.log(calculator(20, 10, "-")); 
+console.log(calculator(20, 10, "*")); 
+console.log(calculator(20, 10, "/"));
+console.log(calculator(20, 0, "/"));
 

@@ -1,7 +1,6 @@
 const taskInput = document.getElementById("new-task-input");
 const addTaskBtn = document.getElementById("add-task-btn");
 const taskList = document.getElementById("task-list");
-
 const remainingTask = document.getElementById("tasks-remaining");
 const completedTask = document.getElementById("tasks-completed");
 
@@ -40,7 +39,6 @@ function addTask() {
 
     `;
 
-
     taskList.appendChild(li);
 
     remaining++;
@@ -48,8 +46,7 @@ function addTask() {
     updateCounts();
 
     taskInput.value = "";
-
-
+    
 
     // Checkbox complete
     const checkbox = li.querySelector(".task-checkbox");
@@ -79,8 +76,6 @@ function addTask() {
         updateCounts();
 
     });
-
-
 
     // Delete task
     const deleteBtn = li.querySelector(".delete-btn");
