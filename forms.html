@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms Explained</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            margin: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 30px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        textarea,
+        select {
+            width: calc(100% - 22px); /* Account for padding and border */
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+            box-sizing: border-box; /* Include padding/border in width */
+        }
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+        .radio-group label,
+        .checkbox-group label {
+            display: inline-block; /* For inline radios/checkboxes */
+            margin-right: 15px;
+            font-weight: normal;
+        }
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        button[type="reset"] {
+            background-color: #dc3545;
+            margin-left: 10px;
+        }
+        button[type="reset"]:hover {
+            background-color: #c82333;
+        }
+        .error-message { /* CSS for error messages */
+            color: #dc3545;
+            font-size: 0.9em;
+            margin-top: 5px;
+            display: block; /* Ensure it's on its own line */
+        }
+        input.invalid { /* Highlight invalid inputs */
+            border-color: #dc3545;
+            box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>HTML Forms: Capturing User Input</h1>
+        <p>Forms are used to collect data from users. Let's look at common elements.</p>
+
+        <form action="#" method="post" novalidate> <!-- Added novalidate to disable HTML5 validation -->
+            <h2>Basic Information</h2>
+
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" placeholder="John Doe">
+                <span id="fullNameError" class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="john.doe@example.com">
+                <span id="emailError" class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" minlength="8">
+                <small>Minimum 8 characters</small>
+                <span id="passwordError" class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="18" max="99" value="25">
+                <span id="ageError" class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" placeholder="Type your message here..."></textarea>
+                <span id="messageError" class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <select id="country" name="country">
+                    <option value="">-- Please choose an option --</option>
+                    <option value="usa">United States</option>
+                    <option value="canada">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="australia">Australia</option>
+                </select>
+                <span id="countryError" class="error-message"></span>
+            </div>
+
+            <h2>Preferences</h2>
+
+            <div class="form-group radio-group">
+                <label>Gender:</label>
+                <input type="radio" id="male" name="gender" value="male" checked>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+                <span id="genderError" class="error-message"></span>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <label>Interests:</label><br>
+                <input type="checkbox" id="coding" name="interests" value="coding">
+                <label for="coding">Coding</label>
+                <input type="checkbox" id="reading" name="interests" value="reading">
+                <label for="reading">Reading</label>
+                <input type="checkbox" id="sports" name="interests" value="sports" checked>
+                <label for="sports">Sports</label>
+                <span id="interestsError" class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Submit Application</button>
+                <button type="reset">Reset Form</button>
+            </div>
+        </form>
+    </div>
+    <script src="forms.js"></script>
+</body>
+</html>
