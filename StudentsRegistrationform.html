@@ -38,6 +38,7 @@
         input[type="email"],
         input[type="password"],
         input[type="number"],
+        input[type="father name"]
         textarea,
         select {
             width: calc(100% - 22px); /* Account for padding and border */
@@ -95,8 +96,8 @@
 </head>
 <body>
     <div class="container">
-        <h1>HTML Forms: Capturing User Input</h1>
-        <p>Forms are used to collect data from users. Let's look at common elements.</p>
+        <h1>HTML Forms: Students Registration details</h1>
+        <p>Forms are used to collect data from students. Let's look at common elements.</p>
 
         <form action="#" method="post" novalidate> <!-- Added novalidate to disable HTML5 validation -->
             <h2>Basic Information</h2>
@@ -124,6 +125,12 @@
                 <label for="age">Age:</label>
                 <input type="number" id="age" name="age" min="18" max="99" value="25">
                 <span id="ageError" class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="fatherName">Father's Name:</label>
+                <input type="text" id="fatherName" name="fatherName" placeholder="Enter your father's name">
+                <span id="fatherNameError" class="error-message"></span>
             </div>
 
             <div class="form-group">
@@ -174,6 +181,6 @@
             </div>
         </form>
     </div>
-    <script src="forms.js"></script>
+    <script src="StudentsRegistrationform.js"></script>
 </body>
 </html>
